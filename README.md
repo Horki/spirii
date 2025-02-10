@@ -8,6 +8,7 @@ Spirii backend code challange
 ## Project setup
 
 ```bash
+$ nvm install # install v23.1.0
 $ nvm use
 $ pnpm install
 ```
@@ -15,25 +16,19 @@ $ pnpm install
 ## Compile and run the project
 
 ```bash
-# development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+# Start Transactions
+$ pnpm run start:dev transactions
+# Test endpoint
+$ curl -v -H "Accept: application/json" "http://localhost:3001/transactions?startDate=2023-02-01&endDate=2023-02-01"
 ```
 
-## Run tests
+## Run format, lint, tests
 
 ```bash
+# format
+$ pnpm format
+# linter
+$ pnpm lint
 # unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
+$ pnpm test
 ```
